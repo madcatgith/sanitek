@@ -151,7 +151,7 @@ gulp.task('watch', function() {
 });
 
 /*Стандартная задача для gulp (запуск необходимых для сборки dev скриптов)*/
-gulp.task('default', gulp.parallel('sass','css-libs', 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel(gulp.series('sass','css-libs'), 'scripts', 'browser-sync', 'watch'));
 /*Задача для gulp (запуск необходимых для сборки product скриптов)*/
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
 
