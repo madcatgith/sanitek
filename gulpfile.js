@@ -18,6 +18,9 @@
 var gulp      = require('gulp'), // Подключаем Gulp
     sass        = require('gulp-sass'), //Подключаем Sass пакет,
     browserSync = require('browser-sync'); // Подключаем Browser Sync
+    plumber     = require('gulp-plumber'), // модуль для отслеживания ошибок
+    rigger      =require('gulp-rigger'), // модуль для импорта содержимого одного файла в другой
+    sourcemaps  = require('gulp-sourcemaps'), // модуль для генерации карты исходных файлов
     concat      = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
     uglify      = require('gulp-uglifyjs'); // Подключаем gulp-uglifyjs (для сжатия JS)
     cssnano     = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
@@ -35,8 +38,11 @@ var gulp      = require('gulp'), // Подключаем Gulp
 /*Компиляция файлов SCSS*/
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/scss/**/*.scss') // Берем источник
+        .pipe(plumber()) // для отслеживания ошибок
+        .pipe(sourcemaps.init()) // инициализируем sourcemap
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+        .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
@@ -52,14 +58,30 @@ gulp.task('css-libs', function() {
 /*Компиляция файлов js и доп библиотек*/
 
 /*Обработка js скриптов как своих так и библиотек загруженных через bower*/
-gulp.task('scripts', function() {
-    return gulp.src([ // Берем все необходимые библиотеки
-        /*!!!Сюда добавляем доп библиотеки!!!*/
-        'app/libs/jquery/dist/jquery.min.js', // Берем jQuery
-        ])
-        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+/*gulp.task('scripts', function() {
+    return gulp.src('app/libs/libs.js') //Дополнительные библиотеки подключенные через rigger
+        .pipe(plumber()) // для отслеживания ошибок
+        .pipe(rigger()) // импортируем все указанные файлы в main.js
+        .pipe(gulp.dest('app/js'))
+        .pipe(rename({ suffix: '.min' }))
+        //.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(sourcemaps.init()) //инициализируем sourcemap
         .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+        .pipe(sourcemaps.write('./')) //  записываем sourcemap
+        //.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+});*/
+
+/*Обработка js скриптов из libs через rigger*/
+gulp.task('scripts', function () {
+  return gulp.src('app/libs/libs.js') // получим файл main.js
+    .pipe(plumber()) // для отслеживания ошибок
+    .pipe(rigger()) // импортируем все указанные файлы в main.js
+    .pipe(gulp.dest('app/js'))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.init()) //инициализируем sourcemap
+    .pipe(uglify()) // минимизируем js
+    .pipe(sourcemaps.write('./')) //  записываем sourcemap
+    .pipe(gulp.dest('app/js')); // положим готовый файл
 });
 
 /*Задача для перезагрузки браузера при изменении html*/
