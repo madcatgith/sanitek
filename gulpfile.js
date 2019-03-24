@@ -40,7 +40,7 @@ gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/scss/**/*.scss') // Берем источник
         .pipe(plumber()) // для отслеживания ошибок
         .pipe(sourcemaps.init()) // инициализируем sourcemap
-        .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(sass.sync()) // Преобразуем Sass в CSS посредством gulp-sass (Использовать нужно sass.sync() иначе plumber не работает)
         .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
         .pipe(sourcemaps.write('./')) // записываем sourcemap
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
