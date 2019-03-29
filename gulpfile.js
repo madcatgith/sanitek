@@ -147,7 +147,7 @@ gulp.task('clear', function (callback) {
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
-    gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и библиотеками
+    gulp.watch(['app/js/main.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и библиотеками
 });
 
 /*Стандартная задача для gulp (запуск необходимых для сборки dev скриптов)*/
