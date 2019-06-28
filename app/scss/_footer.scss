@@ -32,19 +32,30 @@ footer{
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 400;
-	display: block;	
-	float: left;
+	display: block;		
+	min-height: 45px;
+	color: #1d2029;
+	transition: 0.5s;
 }
-.viewed-products .viewed-products-slider .item .image-wraper{
-	width: 90px;
-	display: inline-block;
-	margin: 0 15px;
+/*.viewed-products .viewed-products-slider .item a:hover .product-name{
+	color: 
+}*/
+.viewed-products .viewed-products-slider .item .price{
+	line-height: 15px;
+	font-weight: 700;
+	font-size: 14px;
+	color: #1d2029;
 }
-.viewed-products .viewed-products-slider .item .image-wraper img{
-	width: 100%;	
+.viewed-products .viewed-products-slider .item img{
+	padding: 0 15px;	
 }
-.viewed-products .viewed-products-slider .item .info-wrapper{
-	width: 270px;
-	display: inline-block;
-	position: relative;
+.viewed-products .viewed-products-slider .owl-nav button{
+	border: 1px solid #e5e5e5;
+	border-radius: 2px 0 0 2px;
+	width: 30px;
+	height: 30px;
+}
+.viewed-products .viewed-products-slider .owl-nav button span{
+	font-size: 35px;
+	line-height: 20px;
 }
