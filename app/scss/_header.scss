@@ -12,6 +12,13 @@ body {
 	color: $standartcolor;
 }
 
+.gray-line{
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid #f6f6f6;
+}
+
 a {
     color: $sanigreen;
     text-decoration: none; }
@@ -26,7 +33,6 @@ a:hover{
 .full-width{
     padding: 0 30px;
     margin: 0 auto;
-    background: #fff;
     float: none;	
 }
 
