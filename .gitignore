@@ -8,7 +8,9 @@
 /empty
 /dist
 /app/index.html
-/app/css
+/app/css/*
+!/app/css/libs.css
+
 
 
 !/app/js/main.js
