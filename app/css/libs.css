@@ -3587,7 +3587,8 @@ html {
   height: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  -webkit-background-size: contain;
+          background-size: contain;
   -webkit-transition: opacity 400ms ease;
   -o-transition: opacity 400ms ease;
   transition: opacity 400ms ease; }
@@ -3613,7 +3614,8 @@ html {
     background: #D6D6D6;
     display: inline-block;
     cursor: pointer;
-    border-radius: 3px; }
+    -webkit-border-radius: 3px;
+            border-radius: 3px; }
     .owl-theme .owl-nav [class*='owl-']:hover {
       background: #869791;
       color: #FFF;
@@ -3642,7 +3644,8 @@ html {
       -webkit-transition: opacity 200ms ease;
       -o-transition: opacity 200ms ease;
       transition: opacity 200ms ease;
-      border-radius: 30px; }
+      -webkit-border-radius: 30px;
+              border-radius: 30px; }
     .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
       background: #869791; }
 
