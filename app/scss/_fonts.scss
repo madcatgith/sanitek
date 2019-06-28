@@ -10,3 +10,95 @@
 }*/
 
 /*---------------------------------------------*/
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-ExtraBold",
+	("eot","woff","ttf")
+	) {
+	font-weight: 800;
+	font-style: normal;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-Bold",
+	("eot","woff","ttf")
+	) {
+	font-weight: bold;
+	font-style: normal;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-SemiBold",
+	("eot","woff","ttf")
+	) {
+	font-weight: 600;
+	font-style: normal;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-Regular",
+	("eot","woff","ttf")
+	) {
+	font-weight: normal;
+	font-style: normal;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-Light",
+	("eot","woff","ttf")
+	) {
+	font-weight: 300;
+	font-style: normal;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-ExtraBoldItalic",
+	("eot","woff","ttf")
+	) {
+	font-weight: 800;
+	font-style: italic;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-BoldItalic",
+	("eot","woff","ttf")
+	) {
+	font-weight: bold;
+	font-style: italic;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-SemiBoldItalic",
+	("eot","woff","ttf")
+	) {
+	font-weight: 600;
+	font-style: italic;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-Italic",
+	("eot","woff","ttf")
+	) {
+	font-weight: normal;
+	font-style: italic;
+}
+
+@include font-face(
+	"Open Sans",
+	"../fonts/OpenSans/OpenSans-LightItalic",
+	("eot","woff","ttf")
+	) {
+	font-weight: 300;
+	font-style: italic;
+}
+
+
