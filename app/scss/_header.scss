@@ -13,7 +13,7 @@ body {
     color: #555; }
 
 a {
-    color: #5d9139;
+    color: $sanigreen;
     text-decoration: none; }
 a:hover{
     color: #63bd57;
@@ -48,7 +48,7 @@ button:focus {
 .region-wrap{
 	.current-city{
 		&:before{
-			
+
 		}
 	}
 }
