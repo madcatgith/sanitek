@@ -90,6 +90,13 @@ gulp.task('code', function() {
     .pipe(browserSync.reload({ stream: true }))
 });
 
+/*Сборка html фалов*/
+gulp.task("html:build",function(){
+    gulp.src('app/index.html')
+        .pipe(rigger())
+        .pipe(gulp.dest('app'));
+});
+
 /*Синхронизация браузера*/
 gulp.task('browser-sync', function() { // Создаем таск browser-sync
     browserSync({ // Выполняем browserSync
@@ -151,7 +158,7 @@ gulp.task('watch', function() {
 });
 
 /*Стандартная задача для gulp (запуск необходимых для сборки dev скриптов)*/
-gulp.task('default', gulp.parallel(gulp.series('sass','css-libs'), 'scripts', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('html:build',gulp.series('sass','css-libs'), 'scripts', 'browser-sync', 'watch'));
 /*Задача для gulp (запуск необходимых для сборки product скриптов)*/
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts'));
 
