@@ -192,8 +192,7 @@ footer .gray-line{
     height: 18px;
     position: absolute;
     top: 3px;
-    left: -25px;
-    background: url("../img/next.png") -221px -59px no-repeat;
+    left: -25px;   
 }
 .footer .footer-contacts i{
 	content: " ";
@@ -237,7 +236,7 @@ footer .gray-line{
 	padding: 10px 22px;
 	border-bottom: 1px solid #f2f2f2;
 }
-.footer .footer-contacts .phone .main-phone:after {
+/*.footer .footer-contacts .phone .main-phone:after {
     content: "";
     position: absolute;
     right: 0;
@@ -246,16 +245,10 @@ footer .gray-line{
     width: 5px;
     height: 3px;
     background: url("../img/next.png") -20px -333px no-repeat;
-}
+}*/
 .footer .footer-contacts .footer-email, .footer .footer-contacts .footer-adress{
 	position: relative;	
 	margin-bottom: 20px;
-}
-.footer .footer-contacts .footer-email i{
-	background: url("../img/next.png") -161px -118px no-repeat;
-}
-.footer .footer-contacts .footer-adress i{
-	background: url("../img/next.png") -253px -287px no-repeat;
 }
 .footer .copyrights{
 	color: #888;
