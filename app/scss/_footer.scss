@@ -8,7 +8,7 @@ footer{
 }
 .viewed-products .section-title{
 	font-size: 18px;
-	color: #1d2029;
+	color: $standartcolor;
 	margin: 26px 0 4px;
 	line-height: 30px;
 	font-weight: 700;
@@ -34,17 +34,17 @@ footer{
 	font-weight: 400;
 	display: block;		
 	min-height: 45px;
-	color: #1d2029;
-	transition: 0.5s;
+	color: $standartcolor;
+	transition: 0.2s;
 }
-/*.viewed-products .viewed-products-slider .item a:hover .product-name{
-	color: 
-}*/
+.viewed-products .viewed-products-slider .item a:hover .product-name{
+	color: $sanigreen;
+}
 .viewed-products .viewed-products-slider .item .price{
 	line-height: 15px;
 	font-weight: 700;
 	font-size: 14px;
-	color: #1d2029;
+	color: $standartcolor;
 }
 .viewed-products .viewed-products-slider .item img{
 	padding: 0 15px;	
@@ -58,4 +58,231 @@ footer{
 .viewed-products .viewed-products-slider .owl-nav button span{
 	font-size: 35px;
 	line-height: 20px;
+}
+
+// footer section
+.footer .footer-menu{
+	list-style-type: none;
+}
+.footer .footer-menu li{
+	margin-bottom: 6px;
+}
+.footer .footer-menu li.title, .footer .footer-title{
+	margin-bottom: 12px;
+}
+.footer .footer-menu li.title a{	
+	font-weight: 700;
+}
+.footer .footer-menu a{
+	color: $standartcolor;
+	transition: 0.2s;
+	font-weight: 400;
+	line-height: 18px;
+	font-size: 16px;
+}
+.footer .footer-menu a:hover{
+	color: $sanigreen;
+}
+.footer .footer-title{
+	font-weight: 700;
+	display: block;
+	line-height: 18px;
+	font-size: 16px;
+	color: $standartcolor;
+}
+.footer .subscribe{
+	margin-bottom: 25px;
+}
+.footer .subscribe input[type="email"]{
+	border: 1px solid #eee;
+	line-height: 30px;
+	font-size: 13px;
+	background-color: #fff;
+	padding: 5px 43px 5px 13px; 
+}
+.footer .subscribe button[type="submit"]{
+	height: 40px;
+	width: 40px;
+	border: none;
+	position: relative;
+	top: 3px;
+	left: -5px;
+	background-color: $sanigreen;
+	color: #fff;
+	font-size: 18px;
+	line-height: 15px;
+	border-radius: 2px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.footer .subscribe button[type="submit"]:hover{
+	background-color: rgba(93, 145, 57, 0.8);
+}
+.footer .socials{
+	list-style-type: none;	
+	width: 260px;
+}
+.footer .socials li{
+	display: inline-block;
+}
+.footer .socials .socil-icon:hover{
+	opacity: 0.8;
+}
+.footer .socials .socil-icon{
+	border-radius: 100%;
+	margin: 5px 10px 5px 0;
+	display: block;
+	height: 40px;
+	position: relative;
+	overflow: hidden;
+	width: 40px;
+	transition: 0.2s;
+	background: url("../img/social.png");
+	background-repeat: no-repeat;
+}
+.footer .socials .vk{
+	background-position: -4px -4px;
+}
+.footer .socials .fb{
+	background-position: -54px -4px;
+}
+.footer .socials .tw{
+	background-position: -104px -4px;
+}
+.footer .socials .in{
+	background-position: -154px -4px;
+}
+.footer .socials .you{
+	background-position: -204px -4px;
+}
+.footer .socials .od{
+	background-position: -254px -4px;
+}
+.footer .socials .g{
+	background-position: -54px -54px;
+}
+.footer .socials .mailru{
+	background-position: -4px -54px;
+}
+.footer .footer-contacts{
+	padding-left: 25px;
+}
+.footer .footer-contacts .phone{
+	position: relative;
+}
+.footer .footer-contacts .phone i{
+	content: " ";
+    display: block;
+    width: 16px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    left: -25px;
+    background: url("../img/next.png") -221px -59px no-repeat;
+}
+.footer .footer-contacts i{
+	content: " ";
+    display: block;
+    width: 16px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    left: -25px;
+}
+.footer .footer-contacts a{
+	color: $standartcolor;
+	transition: 0.3s;	
+}
+.footer .footer-contacts a:hover{
+	color: $sanigreen;
+}
+.footer .footer-contacts .phone{
+	position: relative;
+	max-width: 155px;
+	margin-bottom: 20px;
+	z-index: 5
+}
+.footer .footer-contacts .phone a{
+	font-weight: 700;
+}
+.footer .footer-contacts .phone:hover .phones-dropdown{
+	display: block;
+}
+.footer .footer-contacts .phones-dropdown{
+	display: none;
+	list-style-type: none;	
+	background-color: #fff;
+	position: absolute;
+	left: -25px;
+	width: 186px;
+	bottom: -85px;
+	box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+}
+.footer .footer-contacts .phones-dropdown li{
+	padding: 10px 22px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.footer .footer-contacts .phone .main-phone:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -2px;
+    width: 5px;
+    height: 3px;
+    background: url("../img/next.png") -20px -333px no-repeat;
+}
+.footer .footer-contacts .footer-email, .footer .footer-contacts .footer-adress{
+	position: relative;
+	width: 186px;
+	margin-bottom: 20px;
+}
+.footer .footer-contacts .footer-email i{
+	background: url("../img/next.png") -161px -118px no-repeat;
+}
+.footer .footer-contacts .footer-adress i{
+	background: url("../img/next.png") -253px -287px no-repeat;
+}
+.footer .copyrights{
+	color: #888;
+	font-size: 16px;
+	padding: 30px 0;
+	border-top: 1px solid #eee;
+}
+.footer .copyrights i{
+    display: inline-block;
+    height: 20px;
+    width: 34px;
+    background: url("../img/pay_icons.png") no-repeat;
+    margin: 0 11px 9px 0;
+}
+.footer .copyrights i.cacsh {
+    background-position: 0 -1px;
+}
+.footer .copyrights i.mastercard {
+    background-position: -42px -1px;
+}
+.footer .copyrights i.visa {
+    background-position: -89px -1px;
+}
+.footer .copyrights i.yandex_money {
+    background-position: -142px -1px;
+    width: 21px;
+}
+.footer .copyrights i.webmoney {
+    background-position: -182px -1px;
+    margin-right: 7px;
+}
+.footer .copyrights i.qiwi {
+    background-position: -222px -1px;
+    margin-right: 0;
+}
+.footer .copyrights i.sbrf {
+    background-position: -259px -1px;
+}
+.footer .copyrights i.alfa {
+    background-position: -305px -1px;
+}
+.footer .copyrights .pay-wrapper{
+	text-align: right;
 }
