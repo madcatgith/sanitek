@@ -3,7 +3,7 @@ $( document ).ready(function() {
         nav: true,
         loop: true,
         margin: 15,       
-        autoWidth: true,
+        autoWidth: false,
         dots: false,
         responsive:{
             0:{
@@ -13,7 +13,7 @@ $( document ).ready(function() {
                 items:3
             },
             1000:{
-                items:3
+                items:4
             }
         }
     });

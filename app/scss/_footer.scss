@@ -32,8 +32,8 @@ footer{
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: 400;
-	display: block;
-	height: 60px;
+	display: block;	
+	float: left;
 }
 .viewed-products .viewed-products-slider .item .image-wraper{
 	width: 90px;
@@ -46,4 +46,5 @@ footer{
 .viewed-products .viewed-products-slider .item .info-wrapper{
 	width: 270px;
 	display: inline-block;
+	position: relative;
 }
