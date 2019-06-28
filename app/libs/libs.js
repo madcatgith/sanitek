@@ -7,6 +7,9 @@
 // импортируем необходимые js-файлы Bootstrap 4
 //= ../../node_modules/bootstrap/dist/js/bootstrap.js
 
+// импортируем owl slider
+//= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
+
 /*../../node_modules/bootstrap/js/dist/alert.js
 ../../node_modules/bootstrap/js/dist/button.js
 ../../node_modules/bootstrap/js/dist/carousel.js
