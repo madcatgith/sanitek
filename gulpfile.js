@@ -92,8 +92,9 @@ gulp.task('code', function() {
 
 /*Сборка html фалов*/
 gulp.task("html:build",function(){
-    gulp.src('app/index.html')
+    return gulp.src('app/main.html')
         .pipe(rigger())
+        .pipe(rename('index.html'))
         .pipe(gulp.dest('app'));
 });
 
@@ -153,7 +154,7 @@ gulp.task('clear', function (callback) {
 /*Скрипт наблюдения за файлами*/
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
-    gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
+    gulp.watch('app/*.html', gulp.parallel('code'); // Наблюдение за HTML файлами в корне проекта
     gulp.watch(['app/js/main.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и библиотеками
 });
 
