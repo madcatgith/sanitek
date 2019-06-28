@@ -1,9 +1,14 @@
-/node_modules
+/node_modules/*
+!/node_modules/bootstrap
+/node_modules/bootstrap/*
+!/node_modules/bootstrap/scss
+/node_modules/bootstrap/scss/*
+!/node_modules/bootstrap/scss/_variables.scss
+
 /empty
 /dist
 /app/index.html
 /app/css
-/app/js
 
-!/node_modules/bootstrap/scss/_variables.scss
+
 !/app/js/main.js
