@@ -3,7 +3,7 @@ body {
     font-weight: normal;
     font-style: normal;
     margin: 0;
-    color: #555; 
+    color: $standartcolor; 
 }
 
 *:after, *:before{
@@ -83,7 +83,7 @@ button:focus {
 
 .phone{
 	.dropdown{
-		left: 23.5%;
+		left: 25%;
 		ul{
 			list-style-type: none;
 			display: block;
@@ -92,6 +92,7 @@ button:focus {
 			margin: 0;
 			padding: 0;
 			li{
+				border-top: 1px solid #f2f2f2;
 				a{
 					padding: 18px 22px;
 					display: block;
@@ -99,6 +100,10 @@ button:focus {
 					white-space: nowrap;
 					color: $standartcolor;
 					font-weight: 700;
+					font-size: .867em;
+				}
+				&:not(:last-child){
+					border: 0;
 				}
 			}
 		}
@@ -144,7 +149,7 @@ button:focus {
 		.main-number{
 			color: $standartcolor;
 			font-weight: 700;
-			font-size: 1em;
+			font-size: .867em;
 		}
 	}
 
@@ -224,6 +229,67 @@ button:focus {
 					padding: 41px 12px;
 				}
 			}
+		}
+	}
+}
+
+#small-header{
+	opacity: 1;
+    transition: top .3s linear;
+    background: #fff;
+    display: block;
+    position: fixed;
+    box-shadow: 0 1px 5px rgba(0,0,0,.136);
+    top: -100px;
+    z-index: 996;
+    right: 0;
+    left: 0;
+    &.show{
+		position: fixed;
+		margin: 0;
+		width: 100%;
+		top: 0;
+		z-index: 996;
+		right: 0;
+		left: 0;
+    }
+	.logo{
+		max-width: 100%;
+		vertical-align: middle;
+		height: 62px;
+		overflow: hidden;
+	}
+
+	.main-nav{
+		ul{
+			list-style-type: none;
+			display: block;
+			width: 100%;
+			height: 62px;
+			margin: 0 auto;
+			padding: 0;
+			li{
+				float: left;
+				a{
+					font-size: 1em;
+					color: $standartcolor;
+					font-weight: 700;
+					display: inline-block;
+					padding: 22px 28px;
+				}
+			}
+		}
+	}
+
+	.login-button, .search-button{
+		display: block;
+		width: 50%;
+		padding: 0 10px;
+		float: left;
+		text-align: center;
+		i{
+			font-size: 1.8em;
+			line-height: 62px;
 		}
 	}
 }
