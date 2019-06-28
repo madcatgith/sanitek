@@ -103,9 +103,6 @@ h1 {
 input:focus {
   outline-color: #5d9139; }
 
-footer a:hover {
-  color: #5d9139 !important; }
-
 button:focus {
   outline: none; }
 
@@ -118,90 +115,5 @@ button:focus {
   display: block; }
 
 /*--------------------*/
-header {
-  margin-bottom: 30px;
-  border-bottom: 1px solid #f2f2f2; }
-
-/*Логотип*/
-header .logo-wrap {
-  margin-left: 40px; }
-
-header .logo-wrap .logo {
-  max-height: 100%;
-  max-width: 100%;
-  width: 170px;
-  padding: 24px 0; }
-
-/*Пункты основного меню*/
-header .h-menu-default {
-  list-style-type: none;
-  display: block;
-  width: 100%; }
-
-header .h-menu-default li {
-  display: block;
-  float: left; }
-
-header .h-menu-default li a {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 40px 12px;
-  color: #222; }
-
-header .underline-wrap {
-  position: relative;
-  visibility: visible; }
-
-header .underline-wrap .hover-underline {
-  background-color: #5d9139;
-  position: absolute;
-  /*bottom: -41px;*/
-  left: 0;
-  height: 2px;
-  right: 100%;
-  opacity: 1;
-  -webkit-transition: right .15s ease-out;
-  -o-transition: right .15s ease-out;
-  transition: right .15s ease-out; }
-
-header .h-menu-default li:hover > .underline-wrap .hover-underline {
-  right: 0; }
-
-/*Телефоны*/
-header .phones-wrap {
-  font-weight: 700;
-  line-height: 17px;
-  position: relative; }
-
-header .phones-wrap .dropdown {
-  background-color: #fff;
-  top: 60px;
-  left: -7px;
-  z-index: 2;
-  margin-top: 14px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-  -webkit-box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2); }
-
-header .phones-wrap a {
-  color: #222; }
-
-header .phones-wrap a:hover {
-  text-decoration: underline; }
-
-header .phones-wrap > a {
-  font-size: 16px;
-  line-height: 104px;
-  display: inline-block;
-  height: 104px; }
-
-header .phones-wrap .dropdown a {
-  display: inline-block;
-  text-align: center;
-  padding: 7px 22px 7px;
-  display: block;
-  white-space: nowrap; }
 
 /*# sourceMappingURL=main.css.map */
