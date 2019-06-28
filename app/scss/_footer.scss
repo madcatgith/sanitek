@@ -59,3 +59,27 @@ footer{
 	font-size: 35px;
 	line-height: 20px;
 }
+
+// footer section
+.footer .footer-menu{
+	list-style-type: none;
+}
+.footer .footer-menu li{
+	margin-bottom: 6px;
+}
+.footer .footer-menu li.title{
+	margin-bottom: 12px;
+}
+.footer .footer-menu li.title a{	
+	font-weight: 700;
+}
+.footer .footer-menu a{
+	color: #1d2029;
+	transition: 0.5s;
+	font-weight: 400;
+	line-height: 18px;
+	font-size: 16px;
+}
+/*.footer .footer-menu a:hover{
+	color: 
+}*/
