@@ -1,8 +1,10 @@
 $( document ).ready(function() {
     $('.viewed-products-slider').owlCarousel({
-        loop:true,
-        margin:10,
-        nav:true,
+        nav: true,
+        loop: true,
+        margin: 15,       
+        autoWidth: true,
+        dots: false,
         responsive:{
             0:{
                 items:1
@@ -11,7 +13,7 @@ $( document ).ready(function() {
                 items:3
             },
             1000:{
-                items:5
+                items:3
             }
         }
     });
