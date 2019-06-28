@@ -3,7 +3,7 @@ $( document ).ready(function() {
         nav: true,
         loop: true,
         margin: 15,       
-        autoWidth: true,
+        autoWidth: false,
         dots: false,
         responsive:{
             0:{

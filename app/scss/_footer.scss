@@ -2,6 +2,10 @@
 footer{
 	background-color: #f6f6f7;
 }
+footer ul{
+	padding: 0;
+	margin: 0;
+}
 //viewed-products
 .viewed-products{
 	position: relative;
@@ -64,6 +68,9 @@ footer{
 .footer .footer-menu{
 	list-style-type: none;
 }
+.footer .contacts-wrapper{
+	padding-left: 12%;
+}
 .footer .footer-menu li{
 	margin-bottom: 6px;
 }
@@ -115,12 +122,14 @@ footer{
 	cursor: pointer;
 	transition: 0.2s;
 }
+.footer .subscribe button[type="submit"] i:before{
+	color: #fff;
+}
 .footer .subscribe button[type="submit"]:hover{
 	background-color: rgba(93, 145, 57, 0.8);
 }
 .footer .socials{
 	list-style-type: none;	
-	width: 260px;
 }
 .footer .socials li{
 	display: inline-block;
@@ -233,8 +242,7 @@ footer{
     background: url("../img/next.png") -20px -333px no-repeat;
 }
 .footer .footer-contacts .footer-email, .footer .footer-contacts .footer-adress{
-	position: relative;
-	width: 186px;
+	position: relative;	
 	margin-bottom: 20px;
 }
 .footer .footer-contacts .footer-email i{
