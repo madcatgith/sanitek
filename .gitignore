@@ -1,2 +1,4 @@
 /node_modules
+/empty
 /dist
+/app/index.html
