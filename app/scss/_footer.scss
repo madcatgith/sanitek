@@ -6,6 +6,9 @@ footer ul{
 	padding: 0;
 	margin: 0;
 }
+footer .gray-line{
+	margin: 10px 0;
+}
 //viewed-products
 .viewed-products{
 	position: relative;
@@ -65,6 +68,9 @@ footer ul{
 }
 
 // footer section
+.footer{
+	padding-top: 35px;
+}
 .footer .footer-menu{
 	list-style-type: none;
 }
@@ -254,8 +260,7 @@ footer ul{
 .footer .copyrights{
 	color: #888;
 	font-size: 16px;
-	padding: 30px 0;
-	border-top: 1px solid #eee;
+	padding: 30px 0;	
 }
 .footer .copyrights i{
     display: inline-block;
@@ -294,3 +299,4 @@ footer ul{
 .footer .copyrights .pay-wrapper{
 	text-align: right;
 }
+
