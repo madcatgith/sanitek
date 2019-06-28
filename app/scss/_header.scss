@@ -80,6 +80,30 @@ button:focus {
 .with-dropdown:hover .dropdown{
     display: block;
 }
+
+.phone{
+	.dropdown{
+		left: 23.5%;
+		ul{
+			list-style-type: none;
+			display: block;
+			background-color: #fff;
+			box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
+			margin: 0;
+			padding: 0;
+			li{
+				a{
+					padding: 18px 22px;
+					display: block;
+					text-align: center;
+					white-space: nowrap;
+					color: $standartcolor;
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
 /*--------------------*/
 
 .topline{
@@ -121,28 +145,6 @@ button:focus {
 			color: $standartcolor;
 			font-weight: 700;
 			font-size: 1em;
-		}
-
-		.dropdown{
-			left: 23.5%;
-			ul{
-				list-style-type: none;
-				display: block;
-				background-color: #fff;
-				box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
-				margin: 0;
-				padding: 0;
-				li{
-					a{
-						padding: 18px 22px;
-						display: block;
-						text-align: center;
-						white-space: nowrap;
-						color: $standartcolor;
-						font-weight: 700;
-					}
-				}
-			}
 		}
 	}
 
