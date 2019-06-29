@@ -78,7 +78,7 @@
 	.logo-wrap{
 		display: inline-block;
 		position: relative;
-		height: 104px;
+		height: $bmenuheight;
 		max-width: 190px;
 		line-height: 101px;
 		.logo{
@@ -89,20 +89,20 @@
 	.top-desc{
 		display: table-cell;
 		color: #999;
-		height: 104px;
+		height: $bmenuheight;
 		font-size: 14px;
 		line-height: 18px;
 		vertical-align: middle;
 		letter-spacing: 0;
 	}
 	.main-nav{
-		height: 104px;
+		height: $bmenuheight;
 		vertical-align: middle;
 		ul{
 			list-style-type: none;
 			display: block;
 			width: 96%;
-			height: 104px;
+			height: $bmenuheight;
 			margin: 0 auto;
 			padding: 0;
 			li{
@@ -112,7 +112,7 @@
 					color: $standartcolor;
 					font-weight: 700;
 					display: inline-block;
-					height: 104px;
+					height: $bmenuheight;
 					padding: 41px 12px;
 				}
 			}
@@ -143,7 +143,7 @@
 	.logo{
 		max-width: 100%;
 		vertical-align: middle;
-		height: 62px;
+		height: $smenuheight;
 		overflow: hidden;
 	}
 
@@ -152,7 +152,7 @@
 			list-style-type: none;
 			display: block;
 			width: 100%;
-			height: 62px;
+			height: $smenuheight;
 			margin: 0 auto;
 			padding: 0;
 			li{
@@ -176,7 +176,7 @@
 		text-align: center;
 		i{
 			font-size: 1.8em;
-			line-height: 62px;
+			line-height: $smenuheight;
 		}
 	}
 }
