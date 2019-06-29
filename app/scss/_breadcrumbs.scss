@@ -1,0 +1,12 @@
+//breadcrumbs
+.breadcrumbs{
+	margin: 30px 0 20px;
+}
+.breadcrumbs a, .breadcrumbs span{
+	color: #b6b5b5;
+	font-size: 12px;
+	transition: 0.3s;
+}
+.breadcrumbs a:hover{
+	color: $sanigreen;
+}
