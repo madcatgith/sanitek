@@ -74,3 +74,50 @@
 		}
 	}
 }
+
+.subscribe-catalog{
+	background-color: $sanigreen;
+	padding: 20px;
+	span{
+		color: #fff;
+		display: block;
+	}
+	.title{
+		font-size: 1.143em;
+    	font-weight: 700;
+    	margin: 0 0 3px;
+	}
+	.subtitle{
+		font-size: 13px;
+		line-height: 16px;
+		opacity: .8;
+		margin: 0 0 6px;
+	}
+	input[type="email"]{
+		border: 1px solid #eee;
+	    line-height: 25px;
+	    font-size: 13px;
+	    background-color: #fff;
+	    padding: 5px 43px 5px 13px;
+	    width: 80%;
+	}
+	button[type="submit"] {
+	    height: 37px;
+	    width: 40px;
+	    border: none;
+	    position: relative;
+	    top: 3px;
+	    left: -5px;
+	    background-color: #ececf2;
+	    color: #fff;
+	    font-size: 18px;
+	    line-height: 11px;	    
+	    border-radius: 2px;
+	    cursor: pointer;	    
+	    transition: 0.2s;
+	    opacity: 0.8;
+	}
+	button[type="submit"]:hover{
+		opacity: 1;
+	}
+}
