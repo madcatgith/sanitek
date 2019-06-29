@@ -17,6 +17,19 @@ $( document ).ready(function() {
 			}
 		}
 	});
+
+	$('.product-slider').owlCarousel({
+        items:1,
+        dots: false,
+        nav: true,
+        loop:false,
+        center:true,
+        margin:10,
+        URLhashListener:true,
+        autoplayHoverPause:true,
+        startPosition: 'URLHash'
+    });
+
 });
 
 if ($(window).width() > 1023) {
