@@ -180,3 +180,119 @@
 		}
 	}
 }
+
+.catalog-drop{
+    position: absolute;
+    z-index: 1000;
+    .catalog-drop-inner{
+    	border-top: 1px solid #f2f2f2;
+		box-shadow: 0 6px 12px rgba(0,0,0,.175);
+		background-clip: padding-box;
+		background-color: #fff;
+		padding: 25px 30px 10px;
+		max-height: 485px;
+		overflow: auto;
+		&::-webkit-scrollbar {
+			width:8px;
+		}
+
+		&::-webkit-scrollbar-track {
+			border-radius:8px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border-radius:8px;
+			background:#999;
+			border:2px solid #fff;
+		}
+		.section-title{
+			display: block;
+			color: $standartcolor;
+			font-size: 25px;
+			white-space: normal;
+			border: none;
+			padding: 14px 29px 14px 19px;
+			font-weight: 700;
+			transition: 0.7s;
+			margin: 0 0 30px;
+			padding: 0 20px 0 0;
+			&:hover{
+				color: $sanigreen;
+				cursor: pointer;
+			}
+		}
+		.subcat{
+			.cat-img{
+				width: 60px;
+				display: block;
+				margin: 0 auto;
+			}
+			.cat-list{
+				.sub-section-title{
+					display: block;
+					font-weight: 700;
+					font-size: 13px;
+					color: $standartcolor;
+					padding: 4px 20px;
+					line-height: 1.5em;
+					&:hover{
+						color: $sanigreen;
+						cursor: pointer;
+					}
+				}
+				ul{
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					max-height: $subheight;
+					overflow: hidden;
+					transition: max-height .5s linear;
+					&.expanded{
+						max-height: 500px;
+					}
+					li{
+						display: block;
+						a{
+							display: block;
+							color: $textgrey;
+							font-size: 13px;
+							padding: 4px 20px;
+							line-height: 1.5em;
+							font-weight: 400;
+							&:hover{
+								color: $sanigreen;
+								cursor: pointer;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.main-nav{
+	.underline-wrap{
+    	position: relative;
+    	visibility: visible;
+    	width: 60%;
+    	margin: 0 auto;
+	}
+
+	.underline-wrap .hover-underline{
+	    background-color: #5d9139;
+	    position: absolute;
+	    top: -2px;
+	    left: 0;
+	    height: 2px;
+	    right: 100%;
+	    opacity: 1;
+	    -webkit-transition: right .15s ease-out;
+	    -o-transition: right .15s ease-out;
+	    transition: right .15s ease-out;
+	}
+
+	li:hover > .underline-wrap .hover-underline{
+    	right: 0;
+	}
+}

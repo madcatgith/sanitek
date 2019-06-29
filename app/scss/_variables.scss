@@ -1,7 +1,11 @@
 /*Colors*/
 $sanigreen: #5d9139;
 $standartcolor: #1d2029;
+$textgrey: #666;
 
 /*Sizes*/
 $bmenuheight: 104px;
 $smenuheight: 62px;
+$menuitemheight: 27.33px;
+$show-items: 3;
+$subheight: ($menuitemheight * $show-items);
