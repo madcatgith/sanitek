@@ -30,6 +30,27 @@ $( document ).ready(function() {
         startPosition: 'URLHash'
     });
 
+    /*Header scripts*/
+    $('.catalog-show').hover(function(){
+    	
+    	if($(this).hasClass('fixed-drop'))
+    		$('.catalog-drop').addClass('fix-drop');
+    	else
+    		$('.catalog-drop').removeClass('fix-drop');
+    	$('.catalog-drop').addClass('show');
+    },
+    function(){
+    	$('.catalog-drop').removeClass('show');
+    });
+
+    /*$('.catalog-drop').hover(function(){
+    	$(this).addClass('show');
+    });*/
+
+	$('.catalog-drop .expbutton').click(function(e){
+		$(this).parent('li').parent('ul').addClass('expanded');
+		$(this).hide();
+	});
 });
 
 if ($(window).width() > 1023) {

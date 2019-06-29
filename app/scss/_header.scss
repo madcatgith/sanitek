@@ -184,6 +184,15 @@
 .catalog-drop{
     position: absolute;
     z-index: 1000;
+    display: none;
+    left: 0;
+    &.show, &:hover{
+    	display: block;
+    }
+    &.fix-drop{
+    	position: fixed;
+    	top: $smenuheight+4px;
+    }
     .catalog-drop-inner{
     	border-top: 1px solid #f2f2f2;
 		box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -214,7 +223,7 @@
 			padding: 14px 29px 14px 19px;
 			font-weight: 700;
 			transition: 0.7s;
-			margin: 0 0 30px;
+			margin: 0 0 10px;
 			padding: 0 20px 0 0;
 			&:hover{
 				color: $sanigreen;
@@ -222,6 +231,7 @@
 			}
 		}
 		.subcat{
+			margin: 20px 0;
 			.cat-img{
 				width: 60px;
 				display: block;
@@ -248,10 +258,13 @@
 					overflow: hidden;
 					transition: max-height .5s linear;
 					&.expanded{
-						max-height: 500px;
+						max-height: 1000px;
 					}
 					li{
 						display: block;
+						&.lvl4{
+							padding-left: 15px;
+						}
 						a{
 							display: block;
 							color: $textgrey;
@@ -262,6 +275,9 @@
 							&:hover{
 								color: $sanigreen;
 								cursor: pointer;
+							}
+							&.expbutton{
+								font-weight: 700;
 							}
 						}
 					}
