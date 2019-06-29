@@ -33,6 +33,6 @@ if ($(window).width() > 1023) {
 }
 
 $( ".sections-wrapper .dropdown" ).each(function(e) {
-	var width = $(".sections-list").width();
+	var width = $(".sections-list").width() + 30;
   	$(this).width(width);
 });
