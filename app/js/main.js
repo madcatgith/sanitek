@@ -31,3 +31,8 @@ if ($(window).width() > 1023) {
 		}
 	});
 }
+
+$( ".sections-wrapper .dropdown" ).each(function(e) {
+	var width = $(".sections-list").width();
+  	$(this).width(width);
+});
