@@ -51,6 +51,23 @@ $( document ).ready(function() {
 		$(this).parent('li').parent('ul').addClass('expanded');
 		$(this).hide();
 	});
+
+	/*Global overlay*/
+	$('.overlay').click(function(e){
+		if(!$(this).hasClass('dev')){
+			e.preventDefault();
+			var item = $(this).data('close');
+			$(item).removeClass('show');
+			$(this).removeAttr('data-close');
+		}
+	});
+
+	$('.close-button').click(function(e){
+		e.preventDefault();
+		var item = $(this).data('close');
+		$(item).removeClass('show');
+		$('.overlay').removeAttr('data-close');
+	});
 });
 
 if ($(window).width() > 1023) {

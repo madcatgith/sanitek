@@ -312,3 +312,61 @@
     	right: 0;
 	}
 }
+
+#search-bar{
+	position: fixed;
+	background: #fff;
+    top: -200px;
+    z-index: 3000;
+    transition-duration: .5s;
+
+    &.show{
+		top: 0;
+    }
+
+	.search-form{
+		padding: 0 200px 0 80px;
+		font-size: 28px;
+		height: 132px;
+		background: 0 0;
+		border: none;
+		border-radius: 0;
+	}
+	.search-input{
+		padding: 0 200px 0 80px;
+		font-size: 28px;
+		height: 132px;
+		background: 0 0;
+		border: none;
+		border-radius: 0;
+		color: $darkgreytext;
+		display: block;
+		width: 100%;
+		vertical-align: top;
+		line-height: 18px;
+		font-family: inherit;
+	}
+
+	.btn-search{
+		padding: 12px 25px;
+		font-size: 1em;
+		position: absolute;
+		right: 58px;
+		top: 45px;
+	}
+
+	.close-button{
+		position: absolute;
+		display: block;
+		font-size: 24px;
+		right: 18px;
+		top: 65px;
+		width: 18px;
+		height: 18px;
+		margin: -8px 0 0 -15px;
+		min-width: 16px;
+		min-height: 16px;
+		line-height: 18px;
+		z-index: 3001;
+	}
+}
