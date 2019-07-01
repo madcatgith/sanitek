@@ -23,6 +23,7 @@ $( document ).ready(function() {
         dots: false,
         nav: true,
         loop:false,
+        lazyLoad:true,
         center:true,
         margin:10,
         URLhashListener:true,
