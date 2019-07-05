@@ -370,3 +370,67 @@
 		z-index: 3001;
 	}
 }
+
+#search-result{
+	position: fixed;
+	top: 132px;
+	left: 0;
+	display: none;
+	background-color: #fff;
+	z-index: 3000;
+	&.show{
+		display: block;
+	}
+
+	.limiter{
+		border-top: 1px solid #f6f6f6;
+		width: 100%;
+		height: 1px;
+		display: block;
+		margin-bottom: 25px;
+	}
+
+.search-res{
+	padding: 0 200px 0 80px;
+	a{
+		color: $standartcolor;
+		.img-wrap{
+			background: 0 0;
+			float: left;
+			padding: 0;
+			position: static;
+			text-align: center;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+		}
+		.item-wrap{
+			padding-left: 25px;
+			margin-left: 99px;
+			border-top: 1px solid transparent;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			span{
+				line-height: 40px;
+				word-wrap: nowrap;
+				display: block;
+				color: $darkgreytext;
+			}
+			.price{
+				font-weight: 700;
+				font-size: 1.2em;
+				display: inline-block;
+			}
+			.price-discount{
+				font-weight: 400;
+				color: $textgrey;
+				text-decoration: line-through;
+				font-size: 0.9em;
+				display: inline-block;
+				margin-left: 15px;
+			}
+		}
+	}
+}
+}

@@ -65,11 +65,40 @@ $( document ).ready(function() {
 
 	$('.close-button').click(function(e){
 		e.preventDefault();
+
 		var item = $(this).data('close');
-		$(item).removeClass('show');
+		if (Array.isArray(item)){
+			$.each(function(index,value){
+				$(value).removeClass('show');
+			});
+		}
+		else{
+			$(item).removeClass('show');
+		}
 		$('.overlay').removeAttr('data-close');
 	});
+
+
+	/*Search button*/
+	$('.search-button').click(function(e){
+		e.preventDefault();
+		var show = ['#search-bar','#search-result'];
+		var close = ['#search-bar', '#search-result'];
+		showModal(show,close);
+	});
 });
+
+function showModal(show,close){
+	if(Array.isArray(show)){
+		$.each(show,function(index,value){
+			$(value).addClass('show');
+		});
+	}
+	else{
+		$(show).addClass('show');
+	}
+	$('.overlay').attr('data-close',close);
+}
 
 if ($(window).width() > 1023) {
 	$(window).scroll(function() {
