@@ -1,84 +1,157 @@
-.slider-wrapper{
-	padding: 80px 56px 29px 56px;
-	position: relative;
-	.product-slider .item img{
-		width: auto;
+.product_detail{
+	.row{
+		border: 1px solid #f2f2f2;
 	}
-	.product-slider{
-		.owl-item{
-			padding: 35px;
-		}		
+	.slider-wraper{
+		.zoom{
+			display: none;
+			position: absolute;
+			left: 50%;
+			top: 43%;
+			z-index: 9;
+			cursor: pointer;
+			i{
+			    position: relative;
+			    font-size: 26px;
+			    display: block;
+			    width: 45px;
+			    height: 45px;
+			    text-align: center;			    
+			    border-radius: 50%;
+			    background-color: $sanigreen;
+			    line-height: 44px;
+			}
+			i:before{
+				color: #fff;
+			}
+		}
+	}
+	.slider-wraper:hover{
+		.zoom{
+			display: block;
+		}
+	}
+	.product_detail_slider{
+		padding: 80px 56px 29px 56px;
+		position: relative;
+		img{
+			max-width: 400px;
+			max-height: 400px;
+			display: block;
+			margin: auto;
+			cursor: pointer;
+		}
 		.owl-nav{
 			position: absolute;
-			top: 45%;
+			top: 50%;
 			width: 100%;
+			left: 0;
+			display: none;
 			.owl-prev{
-				left: 0;
-				position: absolute;
+				float: left;
+				display: block;
+				margin-left: 15%;				
 			}
 			.owl-next{
-				right: 0;
-				position: absolute;
+				float: right;
+				display: block;
+				margin-right: 15%;
 			}
-			.owl-prev, .owl-next{
-				width: 35px;
-			    height: 35px;
-			    border-radius: 50%;
-			    span{
-				    font-size: 40px;
-				    line-height: 27px;
-				    display: block;
-				    position: relative;
-				    height: 35px;
-				    top: 0;
-				    color: $standartcolor;
-			    }
+			span{
+				font-size: 36px;
+			    display: block;
+			    height: 36px;
+			    line-height: 29px;
+			    width: 35px;
+    			height: 35px;
+    			border-radius: 50%;
 			}
-			.owl-prev:hover, .owl-next:hover{				
+			span:hover{
 				background-color: $sanigreen;
-				span{
-					color: #fff;
-				}
+				color: #fff;
 			}
 		}
 	}
-	.button.secondary{
-		display: inline-block;
-		padding-right: 5px;
-	}
-	.button.secondary img{
-		max-width: 100px;
-	} 
-	.slider-nav-wrap{
-		display: block;
-		width: 100%;
-		overflow: hidden;
-		text-align: center;
-		margin-top: 15px;
-	}
-	.loop-fancybox{
-		position: absolute;
-		left: 0; 
-		right: 0; 
-		margin-left: auto; 
-		margin-right: auto; 
-		width: 45px;
-		height: 45px;
-		top: 43%;
-		z-index: 5;
-		border-radius: 50%;
-		background-color: $sanigreen;
-		text-align: center;
-		line-height: 48px;
-		display: none;
-		transition: 0.2s;
-		i:before{
-			color: #fff;
-			font-size: 20px;
+	.product_detail_slider:hover{
+		.owl-nav{
+			display: block;
 		}
+		.zoom{
+			display: block;
+		}
+	}
+	.product_detail_slider_thumbs{
+		text-align: center;
+		img{
+			max-width: 75px;
+			max-height: 75px;
+		}
+		.owl-thumb-item{
+			display: inline-block;
+			cursor: pointer;
+			border: none;
+			background: #fff;
+			border: 2px solid #fff;
+			transition: 0.3s;
+		}
+		.owl-thumb-item.active{
+			border: 2px solid $sanigreen;
+		}		
+	}	
+}
+
+.labels{
+	position: absolute;
+	top: 40px;
+	left: 40px;
+	z-index: 4;
+	max-width: 50%;
+	.label{
+		display: inline-block;
+		margin-right: 5px;
+		background-color: #893ca9;
+		color: #fff;
+		line-height: 12px;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+    	border-radius: 2px;
+    	padding: 4px 10px 5px;
+    	font-size: 12px;
 	}
 }
-.slider-wrapper:hover .loop-fancybox{
-	display: block;
-	cursor: pointer;
+
+.like-and-comparison{
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	z-index: 4;
+	span{
+		display: block;
+		width: 34px;
+		height: 34px;
+		margin-bottom: 5px;
+		border-radius: 50%;
+		cursor: pointer;
+		i{
+			line-height: 34px;
+			text-align: center;
+			margin: auto;
+			display: block;
+		}
+		i:before{
+			color: #616161;
+		}
+	}
+	span:hover{
+		background-color: #e3e3e3;
+		i:before{
+			color: #000;
+		}
+	}
+	span.active{
+		background-color: #e3e3e3;
+		i:before{
+			color: #000;
+		}
+	}
 }

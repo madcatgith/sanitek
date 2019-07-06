@@ -18,18 +18,13 @@ $( document ).ready(function() {
 		}
 	});
 
-	$('.product-slider').owlCarousel({
-        items:1,
-        dots: false,
-        nav: true,
-        loop:false,
-        lazyLoad:true,
-        center:true,
-        margin:10,
-        URLhashListener:true,
-        autoplayHoverPause:true,
-        startPosition: 'URLHash'
-    });
+	$('.product_detail_slider').owlCarousel({
+   		thumbs: true,
+    	thumbsPrerendered: true,
+    	nav: true,
+    	items: 1,
+    	lazyLoad: true    	
+  	});
 
     /*Header scripts*/
     $('.catalog-show').hover(function(){
@@ -124,6 +119,6 @@ if ($(window).width() > 1023) {
 }
 
 $( ".sections-wrapper .dropdown" ).each(function(e) {
-	var width = $(".sections-list").width() + 30;
+	var width = $(".right-side").width() + 30;
   	$(this).width(width);
 });
