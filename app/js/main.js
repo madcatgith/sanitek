@@ -86,6 +86,16 @@ $( document ).ready(function() {
 		var close = ['#search-bar', '#search-result'];
 		showModal(show,close);
 	});
+
+	/*Rating stars*/
+	$('.rating .star-wrap').not('.small').find('.star').hover(
+		function(e){
+			$(this).addClass('hover');
+			$(this).prevAll().addClass('hover');
+		},function(e){
+			$(this).removeClass('hover');
+			$(this).prevAll().removeClass('hover');
+		});
 });
 
 function showModal(show,close){

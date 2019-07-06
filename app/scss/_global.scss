@@ -160,7 +160,7 @@ a.close-button{
 p {
 	margin: 0 0 20px; }
 
-h1 {
+h1, .h1 {
 	padding-bottom: 25px;
 	font-size: 2.133em;
 	line-height: 30px;
@@ -187,12 +187,25 @@ button:focus {
 	}
 }
 
-.h1{
+.clearfix{
+    clear: both;
+}
+
+a.dark_link{
+	font-size: 1em;
+	color: $standartcolor;
+	font-weight: 700;
+	&:hover{
+		color: $sanihovergreen;
+	}
+}
+
+/*.h1{
 	font-size: 2.133em;
 	line-height: 30px;
 	margin: 0 0 35px;
 	padding-bottom: 0;
-}
+}*/
 
 .smallfont{
 	font-size: .867em;
@@ -243,3 +256,44 @@ button:focus {
 	}
 }
 /*--------------------*/
+
+/*Hover Shine*/
+.shine{
+	position: relative;
+    overflow: hidden;
+}
+.shine:before{
+	position: absolute;
+	top: 0;
+	left: -45%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 25%;
+	height: 100%;
+	opacity: 0;
+	background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%);
+	background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg);
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.shine:hover:before{
+	-webkit-animation: .5s shine;
+	animation: .5s shine;
+    opacity: 1;
+}
+
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
