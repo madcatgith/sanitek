@@ -30,6 +30,7 @@
     "imagemin-pngquant": "7.0.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "bootstrap": "4.0.0-alpha.6",
     "bourbon": "5.1.0",
     "jquery": "3.3.1",

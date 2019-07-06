@@ -111,7 +111,10 @@
 		.stock-wrap{
 			.item-stock{
 				font-size: 12px;
-				&.instock{i:before{color:#008b00;}}
+				display: inline-block;
+				margin: 0 6px;
+				&.instock{i:before{color:$instock;}}
+				&.notstock{i:before{color:$instock;}}
 				span{
 					display: inline-block;
 					vertical-align: top;
@@ -120,8 +123,19 @@
 				}
 			}
 			.article{
+				display: inline-block;
+				margin: 0 6px;
 				color: $lightgreytext;
 				font-size: 12px;
+			}
+		}
+
+		.price-block{
+			margin: 11px 0 0;
+			.price{
+				font-size: 18px;
+				font-weight: 700;
+				line-height: 15px;
 			}
 		}
 	}
