@@ -109,6 +109,21 @@ button, html input[type=button], input[type=reset], input[type=submit] {
     -webkit-transition: background-color .3s ease;
 }
 
+.btn-lg {
+    padding: 10px 25px;
+}
+
+.btn.btn-default.white:not(.grey) {
+    color: $sanigreen !important;
+    border: 1px solid $sanigreen;
+    background: #ffffff;
+}
+
+.btn.btn-default.white:not(.grey):hover{
+	background: $sanigreen;
+	color: #ffffff !important;
+}
+
 .basket_button, .basket_button span, button, input[type=submit], input[type=button] {
     text-transform: none;
     box-sizing: border-box;

@@ -25,6 +25,21 @@ $( document ).ready(function() {
     	items: 1,
     	lazyLoad: true    	
   	});
+  	
+  	$('.minus').click(function () {
+		var $input = $(this).parent().find('input');
+		var count = parseInt($input.val()) - 1;
+		count = count < 1 ? 1 : count;
+		$input.val(count);
+		$input.change();
+		return false;
+	});
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+		$input.val(parseInt($input.val()) + 1);
+		$input.change();
+		return false;
+	});
 
     /*Header scripts*/
     $('.catalog-show').hover(function(){
@@ -92,6 +107,14 @@ $( document ).ready(function() {
 			$(this).prevAll().removeClass('hover');
 		});
 });
+
+function zoom(e){
+	if($('.product_detail_slider .owl-item.active').length > 0){		
+		$('.product_detail_slider .owl-item.active a').click();
+	}else{		
+		$('.product_whithout_slider .noimage').click();
+	}
+}
 
 function showModal(show,close){
 	if(Array.isArray(show)){
