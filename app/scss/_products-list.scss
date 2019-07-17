@@ -95,6 +95,18 @@
 				border: 0;
 				vertical-align: middle;
 			}
+
+			.labels{
+				line-height: 12px;
+				max-width: 100%;
+				top: 0;
+				left: 0;
+				text-align: left;
+				.label{
+					margin-top: 5px;
+					font-size: 10px;
+				}
+			}
 		}
 
 		.product-title{
