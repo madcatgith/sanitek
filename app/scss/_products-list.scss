@@ -51,10 +51,8 @@
 }
 
 .products-list{
-	.product-item{
-		text-align: center;
-		background: #fff;
-		overflow: hidden;
+	.product-wrap{
+		position: relative;
 		-webkit-transition: box-shadow ease-out .2s;
 		-moz-transition: box-shadow ease-out .2s;
 		-o-transition: box-shadow ease-out .2s;
@@ -63,17 +61,18 @@
 		-moz-box-sizing: border-box;
 		-o-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-		white-space: normal;
-		padding: 20px 19px 26px 20px;
-		box-shadow: 0 0 0 1px #f2f2f2 inset;
 		margin: 0 -1px 0 0;
-		height: 462px;
-		
-		&:hover{
+		margin-top: -1px;
+		box-shadow: 0 0 0 1px #f2f2f2 inset;
+		background: #fff;
+
+		&:hover .product-item{
 			z-index: 60;
 			box-shadow: 0 0 20px rgba(0,0,0,.1);
 			border: none;
-
+			position: absolute;
+			width: 100%;
+			background: #fff;
 			.footer_button{
 				display: block;
 				opacity: 1;
@@ -82,10 +81,20 @@
 				height: auto;
 			}
 		}
+	}
+	.product-item{
+		text-align: center;
+		overflow: hidden;
+		white-space: normal;
+		padding: 20px 19px 26px 20px;
 
 		.footer_button {
 			display: none;
 			visibility: hidden;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 26px;
 
 			.sku_props {
 				margin: 0 0 2px;
@@ -123,26 +132,34 @@
 					margin-right: 3px;
 
 					.minus, .plus {
-					    font-size: 0;
-					    line-height: 40px;
+					    font-size: 14px;
+					    color: black;
+					    line-height: 34px;
 					    height: 34px;
 					    width: 24px;
 					    display: inline-block;
 					    cursor: pointer;
 					    vertical-align: top;
 					}
-					&>span:before {
+					&>span.minus:before {
 						opacity: .7;
 						display: inline-block;
-						content: "";
+						content: '\f068';
+						color: black;
 						width: 24px;
 						height: 34px;
-						background: url(/bitrix/templates/aspro_next/images/ai.png) -80px -191px no-repeat;
+						font-size: 0.8em;
 						vertical-align: middle;
 					}
 
 					&>span.plus:before {
-					    background-position: -54px -191px;
+						content: '\f067';
+						color: black;
+						display: inline-block;
+						width: 24px;
+						height: 34px;
+						font-size: 0.8em;
+						vertical-align: middle;
 					}
 
 					input[type=text] {

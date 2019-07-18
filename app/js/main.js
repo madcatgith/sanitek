@@ -105,7 +105,18 @@ $( document ).ready(function() {
 		},function(e){
 			$(this).removeClass('hover');
 			$(this).prevAll().removeClass('hover');
-		});
+	});
+
+	/*Catalog max height*/
+	$(".max-height-js .product-wrap").hover(
+		function(){
+			maxProductHeight = $(this).height();
+			$(this).find(".product-item").css({'min-height':(maxProductHeight+62)+"px"});
+		},
+		function(){
+			$(this).find(".product-item").css({'min-height':""});
+		}
+	);
 });
 
 function zoom(e){
