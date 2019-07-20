@@ -1,0 +1,25 @@
+#map{
+	min-height: 450px;
+}
+.contacts{
+	padding-top: 35px;
+	.icon-wrapper{
+		display: inline-block;
+		margin: auto;
+		width: 45px;
+		height: 45px;
+		background-color: $sanigreen;
+		border-radius: 50%;
+		line-height: 45px;
+		text-align: center;
+		i:before{
+			color: #fff;
+		}
+	}
+	.contacts-info{
+		p{
+			margin-bottom: 3px;
+			font-size: 14px;
+		}
+	}
+}

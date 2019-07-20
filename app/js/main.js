@@ -117,6 +117,7 @@ $( document ).ready(function() {
 			$(this).find(".product-item").css({'min-height':""});
 		}
 	);
+
 });
 
 function zoom(e){
