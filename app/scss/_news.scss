@@ -28,7 +28,7 @@
 	position: relative;
 	.callback-label{	
 		background-color: $graybackground;
-		margin: 0 0 25px 35px;
+		margin: 0 0 25px 15px;
 		/*position: fixed;*/
 		text-align: center;
 		i{
@@ -53,7 +53,7 @@
 }
 .news-wrapper{
 	box-shadow: 0 0 0 1px #f2f2f2;
-    margin: 0 0 32px;
+    margin: 0 15px 30px 15px;
     transition: 0.3s;
 	.image-wrapper{
 		a{
@@ -85,10 +85,11 @@
 	box-shadow: 0 0 27px 0 rgba(0,0,0,.1);
 }
 .big-news{
-	margin-right: 30px;
+	margin-bottom: 30px;
 	.text-wrapper{
 		a{
 			font-size: 21px;
 		}
 	}
 }
+

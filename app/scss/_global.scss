@@ -354,6 +354,7 @@ blockquote {
 .shine{
 	position: relative;
     overflow: hidden;
+    display: block;
 }
 .shine:before{
 	position: absolute;

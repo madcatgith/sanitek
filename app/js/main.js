@@ -118,6 +118,10 @@ $( document ).ready(function() {
 		}
 	);
 
+	var bignews = $(".news-standart").height();
+	$(".big-news").height(bignews * 2 + 30);
+	
+
 });
 
 function zoom(e){
