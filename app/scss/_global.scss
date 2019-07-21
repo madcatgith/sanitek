@@ -184,7 +184,12 @@ h1, .h1 {
 	padding-bottom: 25px;
 	font-size: 2.133em;
 	line-height: 30px;
-	margin: 0 0 18px; }
+	margin: 0 0 18px; 
+}
+
+h5{
+	font-size: 0.9em;
+}
 
 input:focus {
 	outline-color: #5d9139; }
@@ -276,6 +281,74 @@ a.dark_link{
 	}
 }
 /*--------------------*/
+
+//Default styles
+.right-side ol, .right-side ul {
+	margin: 0;
+	padding: 0;
+    margin: 0 0 27px;
+}
+
+.right-side ol li, .right-side ul li {
+    margin: 0 0 4px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.right-side ol li:before, .right-side ul li:before {
+    padding: 0;
+    margin-left: 0;
+    width: 20px;
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Open Sans';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.right-side{
+	li {
+		list-style-type: none;
+	}
+	ul li:before {
+		content: "\25CF";
+    	color: $sanigreen;
+	}
+
+	ol {
+    	counter-reset: li;
+	}
+
+	ol li:before {
+	    content: counter(li) ". "!important;
+	    counter-increment: li;
+	    padding-right: 0!important;
+	}
+}
+
+blockquote {
+	position: relative;
+	padding: 10px 20px;
+    margin: 43px 0 45px;
+    min-height: 40px;
+    padding-left: 25px;
+    vertical-align: middle;
+    border: none;
+    &:before{
+		position: absolute;
+		left: 0;
+		bottom: 3px;
+		content: " ";
+		display: block;
+		top: 3px;
+		width: 3px;
+		background-color: $sanigreen;
+    }
+}
 
 /*Hover Shine*/
 .shine{
