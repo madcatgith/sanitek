@@ -1,0 +1,76 @@
+<!--contacts-->
+<div class="container-fluid">
+	<div class="container full-width">
+        <div id="map"></div>
+        <script type="text/javascript">
+              function initMap() {
+                var myLatLng = {lat: -25.363, lng: 131.044};
+
+                var map = new google.maps.Map(document.getElementById('map'), {
+                  zoom: 4,
+                  center: myLatLng
+                });
+
+                var marker = new google.maps.Marker({
+                  position: myLatLng,
+                  map: map,
+                  title: 'Sanitek'
+                });
+              }
+        </script>
+        <div class="contacts">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="contacts-info">
+                                <p>Центральный офис</p>
+                                <p>Челябинск, ул. Лермонтова 21, 3 этаж, офис 4</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="icon-wrapper">
+                               <i class="fas fa-phone-alt"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="contacts-info">
+                                <p>Справочная служба</p>
+                                <p><a href="tel:+7 (000) 000-00-10">+7 (000) 000-00-10</a></p>
+                                <p><a href="tel:+7 (000) 000-00-10">+7 (000) 000-00-10</a></p>
+                                <p><a href="tel:+7 (000) 000-00-10">+7 (000) 000-00-10</a></p>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3">
+                    <div class="row">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="contacts-info">
+                                <p>Email</p>
+                                <p><a href="mailto:test@gmail.com">test@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2">
+                   <button class="btn btn-default white btn-lg float-right">Задать вопрос</button>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>

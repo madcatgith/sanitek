@@ -117,6 +117,7 @@ $( document ).ready(function() {
 			$(this).find(".product-item").css({'min-height':""});
 		}
 	);
+
 });
 
 function zoom(e){
@@ -155,4 +156,13 @@ if ($(window).width() > 1023) {
 $( ".sections-wrapper .dropdown" ).each(function(e) {
 	var width = $(".right-side").width() + 30;
   	$(this).width(width);
+});
+
+$(".tab").click(function(){
+	event.preventDefault();
+	$(".tab.active").removeClass("active");
+	$(this).addClass("active");
+	$(".tab-pane.active").removeClass("active");
+	var id = $(this).data("tab");
+	$("#"+id).addClass("active");
 });
