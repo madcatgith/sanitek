@@ -120,7 +120,20 @@ $( document ).ready(function() {
 
 	var bignews = $(".news-standart").height();
 	$(".big-news").height(bignews * 2 + 30);
-	
+
+	/*Sale(standart) list image hover*/
+	$(".simple-list-item .image-wrap").hover(function(){
+		$(this).parent().find(".body-info a").addClass("hover");
+	},function(){
+		$(this).parent().find(".hover").removeClass("hover");
+	});
+
+	/*Sale(standart) list image hover*/
+	$(".simple-list-item .body-info").hover(function(){
+		$(this).find("a").addClass("hover");
+	},function(){
+		$(this).find(".hover").removeClass("hover");
+	});
 
 });
 

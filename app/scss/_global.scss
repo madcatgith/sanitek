@@ -212,8 +212,20 @@ button:focus {
 	}
 }
 
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+
 .clearfix{
     clear: both;
+    &:after{
+		content: ".";
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+    }
 }
 
 a.dark_link{
