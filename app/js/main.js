@@ -111,7 +111,14 @@ $( document ).ready(function() {
 	$(".max-height-js .product-wrap").hover(
 		function(){
 			maxProductHeight = $(this).height();
-			$(this).find(".product-item").css({'min-height':(maxProductHeight+62)+"px"});
+			/*Fix one item*/
+			if(!(maxProductHeight<400))
+				$(this).find(".product-item").css({'min-height':(maxProductHeight+62)+"px"});
+			else{
+				maxProductHeight = $(this).find(".product-item").height();
+				$(this).find(".product-item").css({'min-height':(maxProductHeight+92)+"px"});
+			}
+			console.log(maxProductHeight);
 		},
 		function(){
 			$(this).find(".product-item").css({'min-height':""});
@@ -133,6 +140,16 @@ $( document ).ready(function() {
 		$(this).find("a").addClass("hover");
 	},function(){
 		$(this).find(".hover").removeClass("hover");
+	});
+
+	/*Share button*/
+	$(".share-button").mouseenter(function(){
+		$(this).prev(".share-items").addClass('show');
+		$(this).addClass("hover");
+	});
+	$(".share-wrap").mouseleave(function(){
+		$(this).find(".share-items.show").removeClass("show");
+		$(this).find(".share-button.hover").removeClass("hover");
 	});
 
 });

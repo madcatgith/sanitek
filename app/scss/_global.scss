@@ -295,19 +295,19 @@ a.dark_link{
 /*--------------------*/
 
 //Default styles
-.right-side ol, .right-side ul {
+.right-side ol, .right-side ul, .content-detail ul, .content-detail ol {
 	margin: 0;
 	padding: 0;
     margin: 0 0 27px;
 }
 
-.right-side ol li, .right-side ul li {
+.right-side ol li, .right-side ul li, .content-detail ul li, .content-detail ol li {
     margin: 0 0 4px;
     padding-left: 20px;
     position: relative;
 }
 
-.right-side ol li:before, .right-side ul li:before {
+.right-side ol li:before, .right-side ul li:before , .content-detail ul li:before, .content-detail ol li:before{
     padding: 0;
     margin-left: 0;
     width: 20px;
@@ -322,7 +322,7 @@ a.dark_link{
     font-style: normal;
 }
 
-.right-side{
+.right-side, .content-detail{
 	li {
 		list-style-type: none;
 	}
@@ -360,6 +360,107 @@ blockquote {
 		width: 3px;
 		background-color: $sanigreen;
     }
+}
+
+/*Share title*/
+
+.with-share-title{
+	position: relative;
+	.global-h1{
+		padding-right: 190px;
+	}
+	.share-wrap{
+		position: absolute;
+		top: -5px;
+		right: 0;
+		display: inline-block;
+		border-radius: 3px;
+		padding: 0 64px 0 20px;
+		cursor: pointer;
+		min-height: 40px;
+		font-size: 1.2em;
+		/*padding-right: 24px;*/
+		a.share-button{
+			display: block;
+			width: 40px;
+			height: 40px;
+			text-align: center;
+			line-height: 40px;
+			vertical-align: middle;
+			border-top-right-radius: 4px;
+			border-bottom-right-radius: 4px;
+			float: right;
+			&:before{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 44px;
+				display: block;
+				background: #fff;
+				width: 1px;
+				height: 100%;
+			}
+		}
+		a.share-button:hover, .share-items:hover + a.share-button, a.hover{
+			background-color: $graybackground;
+		}
+
+		.share-items{
+			/*display: inline-block;*/
+			display: none;
+			/*visibility: hidden;*/
+			padding-top: 1px;
+			padding-bottom: 1px;
+			padding-left: 10px;
+			padding-right: 5px;
+			border-top-left-radius: 4px;
+			border-bottom-left-radius: 5px;
+			margin: 0;
+			margin-right: 1px;
+			background-color: $graybackground;
+			ul{
+				padding:0;
+				margin:0;
+				list-style-type: none;
+				li{
+					float: left;
+					margin-right: 5px;
+					margin-bottom: 5px;
+					margin-top: 5px;
+					a{
+						display: block;
+						width: 28px;
+						height: 28px;
+						border-radius: 3px;
+						background: url(../img/social.svg) -3px -3px no-repeat;
+						transition: opacity .5s;
+						&.fb{
+							background-position: -83px -3px;
+						}
+						&.tg{
+							background-position: -284px -123px;
+						}
+						&.vb{
+							background-position: -283px -4px;
+						}
+						&.wa{
+							background-position: -283px -44px;
+						}
+						&.sk{
+							background-position: -284px -84px;
+						}
+					}
+					&:hover{
+						opacity: 0.9;
+					}
+				}
+			}
+		}
+
+		.share-items:hover,.share-items.show{
+			display: inline-block;
+		}
+	}
 }
 
 /*Hover Shine*/

@@ -26,22 +26,6 @@
 			}
 		}
 
-		.date{
-			margin: 2px 0 9px;
-			display: inline-block;
-			zoom: 1;
-			vertical-align: top;
-			margin-bottom: 5px;
-			span{
-				display: inline-block;
-				vertical-align: top;
-				line-height: 22px;
-				margin: 0 12px 0 0;
-				font-size: 12px;
-				color: $textgrey;
-			}
-		}
-
 		.preview-text{
 			margin-top: 5px;
 			margin-bottom: 25px;
@@ -83,5 +67,21 @@
 	&+.gray-line{
 		display: block;
 		margin: 38px 0;
+	}
+}
+
+.simple-list-item .date, .date.detail{
+	margin: 2px 0 9px;
+	display: inline-block;
+	zoom: 1;
+	vertical-align: top;
+	margin-bottom: 5px;
+	span{
+		display: inline-block;
+		vertical-align: top;
+		line-height: 22px;
+		margin: 0 12px 0 0;
+		font-size: 12px;
+		color: $textgrey;
 	}
 }
