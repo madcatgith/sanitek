@@ -107,11 +107,11 @@ $( document ).ready(function() {
 			$(this).prevAll().removeClass('hover');
 	});
 
-	/*Catalog max height*/
-	$(".max-height-js .product-wrap").hover(
+	/*Catalog max height Old*/
+	/*$(".max-height-js .product-wrap").hover(
 		function(){
 			maxProductHeight = $(this).height();
-			/*Fix one item*/
+
 			if(!(maxProductHeight<400))
 				$(this).find(".product-item").css({'min-height':(maxProductHeight+62)+"px"});
 			else{
@@ -123,7 +123,9 @@ $( document ).ready(function() {
 		function(){
 			$(this).find(".product-item").css({'min-height':""});
 		}
-	);
+	);*/
+	/*Catalog max height New*/
+	setProductsHeight();
 
 	var bignews = $(".news-standart").height();
 	$(".big-news").height(bignews * 2 + 30);
@@ -153,6 +155,29 @@ $( document ).ready(function() {
 	});
 
 });
+
+function setProductsHeight(cName=".max-height-js",rName=".product-row",wName=".product-wrap",iName=".product-item"){
+	var container = $(cName);
+	var rows = container.find(rName);
+
+	rows.each(function(){
+        var maxItemHeight=Math.max.apply( Math, 
+            $.map($(wName, this), function(x) {
+                return $(x).height();
+            })
+        );
+        maxHoverHeight = (parseInt(maxItemHeight) + 62) + "px";
+
+        $(wName, this).data('height',maxHoverHeight);
+        $(wName, this).css('min-height',maxItemHeight);
+
+	});
+	rows.find(wName).hover(function(){
+		$(this).find(iName).css("min-height",$(this).data("height"));
+	},function(){
+		$(this).find(iName).css("min-height","");
+	});
+}
 
 function zoom(e){
 	if($('.product_detail_slider .owl-item.active').length > 0){		
