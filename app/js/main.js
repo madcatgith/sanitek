@@ -149,6 +149,10 @@ $( document ).ready(function() {
 		$(this).prev(".share-items").addClass('show');
 		$(this).addClass("hover");
 	});
+	$(".share-wrap.button span").mouseenter(function(){
+		$(this).next(".share-items").addClass('show');
+		$(this).parent().find(".share-button").addClass("hover");
+	});
 	$(".share-wrap").mouseleave(function(){
 		$(this).find(".share-items.show").removeClass("show");
 		$(this).find(".share-button.hover").removeClass("hover");
