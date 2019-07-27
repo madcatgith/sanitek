@@ -230,6 +230,7 @@ $(".tab").click(function(){
 	$("#"+id).addClass("active");
 });
 
+
 $(function() {
 	if ($(window).width() > 1023) {
 	  var $window = $(window);
@@ -248,7 +249,7 @@ $(function() {
 	      	var $topPosition = 150;
 	     }
 	     
-	    if ($scrollTop + $sidebarHeight > $footerTop) {	    	
+	    if (($scrollTop + $sidebarHeight) > ($footerTop - 150)) {	    	
 	      var $topPosition = Math.min($topPosition, $footerTop - $scrollTop - $sidebarHeight);	      
 	    }
 	    	 
