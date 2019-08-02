@@ -21,16 +21,16 @@ $( document ).ready(function() {
 	});
 
 	//слайдер на главной странице
-	$('.front-page-slider').owlCarousel({
+	$('#frontpage-slider').owlCarousel({
 		nav: true,
-		autoplay:true,
-   		autoplayTimeout:1000,
-   		autoplayHoverPause:true,
-		autoplaySpeed: 500,
+		dots: true,
+		autoplay: true,
+		autoplayTimeout: 15000,
+		autoplayHoverPause: true,
+		autoplaySpeed: 4000,
 		loop: true,
 		margin: 15,	
-		autoWidth: false,
-		dots: true,
+		autoWidth: false,		
 		responsive:{
 			0:{
 				items:1
@@ -64,10 +64,6 @@ $( document ).ready(function() {
 		}
 	});
 
-
-
-
-
 	$('.product_detail_slider').owlCarousel({
    		thumbs: true,
     	thumbsPrerendered: true,
@@ -76,6 +72,7 @@ $( document ).ready(function() {
     	lazyLoad: true    	
   	});
   	
+  	//product detail quantity val changers
   	$('.minus').click(function () {
 		var $input = $(this).parent().find('input');
 		var count = parseInt($input.val()) - 1;
