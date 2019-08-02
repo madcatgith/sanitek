@@ -1,4 +1,50 @@
 $( document ).ready(function() {
+
+	//слайдер брендов на главной странице
+	$('#front-page-brads_slider').owlCarousel({
+		nav: true,
+		loop: true,
+		margin: 15,	
+		autoWidth: false,
+		dots: false,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:3
+			},
+			1000:{
+				items:5
+			}
+		}
+	});
+
+	//слайдер на главной странице
+	$('.front-page-slider').owlCarousel({
+		nav: true,
+		autoplay:true,
+   		autoplayTimeout:1000,
+   		autoplayHoverPause:true,
+		autoplaySpeed: 500,
+		loop: true,
+		margin: 15,	
+		autoWidth: false,
+		dots: true,
+		responsive:{
+			0:{
+				items:1
+			},
+			600:{
+				items:1
+			},
+			1000:{
+				items:1
+			}
+		}
+	});
+
+	//слайдер просмотренных товаров
 	$('.viewed-products-slider').owlCarousel({
 		nav: true,
 		loop: true,
@@ -17,6 +63,10 @@ $( document ).ready(function() {
 			}
 		}
 	});
+
+
+
+
 
 	$('.product_detail_slider').owlCarousel({
    		thumbs: true,
@@ -233,27 +283,29 @@ $(".tab").click(function(){
 
 $(function() {
 	if ($(window).width() > 1023) {
-	  var $window = $(window);
-	  var $sidebar = $(".sidebar");
-	  var $sidebarTop = $(".callback-label-wrapper").position().top;
-	  var $sidebarHeight = $sidebar.height();	 
-	  var $footer = $('footer');
-	  var $footerTop = $footer.position().top - 30;
-	  //console.log($footerTop);
-	 
-	  $window.scroll(function(event) {
-	    $sidebar.addClass("fixed");
-	    var $scrollTop = $window.scrollTop();
-	    var $topPosition = Math.max(0, $sidebarTop - $scrollTop);
-	    if($topPosition < 150){
-	      	var $topPosition = 150;
-	     }
-	     
-	    if (($scrollTop + $sidebarHeight) > ($footerTop - 150)) {	    	
-	      var $topPosition = Math.min($topPosition, $footerTop - $scrollTop - $sidebarHeight);	      
-	    }
-	    	 
-	    $sidebar.css("top", $topPosition);
-	  });
+		if($('*').is('.sidebar')) {
+			  var $window = $(window);
+			  var $sidebar = $(".sidebar");
+			  var $sidebarTop = $(".callback-label-wrapper").position().top;
+			  var $sidebarHeight = $sidebar.height();	 
+			  var $footer = $('footer');
+			  var $footerTop = $footer.position().top - 30;
+			  //console.log($footerTop);
+			 
+			  $window.scroll(function(event) {
+			    $sidebar.addClass("fixed");
+			    var $scrollTop = $window.scrollTop();
+			    var $topPosition = Math.max(0, $sidebarTop - $scrollTop);
+			    if($topPosition < 150){
+			      	var $topPosition = 150;
+			     }
+			     
+			    if (($scrollTop + $sidebarHeight) > ($footerTop - 150)) {	    	
+			      var $topPosition = Math.min($topPosition, $footerTop - $scrollTop - $sidebarHeight);	      
+			    }
+			    	 
+			    $sidebar.css("top", $topPosition);
+			  });
+		}
 	}
 });
