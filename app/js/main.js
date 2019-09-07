@@ -1,5 +1,16 @@
 $( document ).ready(function() {
 
+	//basket js
+	$('.opener-item.basket a').click(function(event){
+		event.preventDefault();		
+		if ($(".basket-wrapper").hasClass("opened")) {
+		 	HideBasket();
+		}else{
+			ShowBasket();
+		}
+	});
+	//backet js end
+
 	//слайдер брендов на главной странице
 	$('#front-page-brads_slider').owlCarousel({
 		nav: true,
@@ -306,3 +317,16 @@ $(function() {
 		}
 	}
 });
+
+
+//basket functions
+
+function ShowBasket(e){
+	$(".basket-wrapper").addClass('opened');
+	$(".basket-wrapper").css('right', '0');
+}
+
+function HideBasket(e){
+	$(".basket-wrapper").removeClass('opened');
+	$(".basket-wrapper").css('right', '-800px');
+}
