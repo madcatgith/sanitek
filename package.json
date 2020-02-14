@@ -37,6 +37,6 @@
     "owl.carousel": "2.3.4",
     "owl.carousel2.thumbs": "^0.1.8",
     "tether": "1.4.5",
-    "yarn": "1.13.0"
+    "yarn": "1.22.0"
   }
 }
